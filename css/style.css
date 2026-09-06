@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 20px 0;
+    font-size: 32px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+section p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+section > a {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section > a:hover {
+    background-color: #444;
+}
+
+/* breaks my newer code, dont use!!! */
+/* section div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+} */ 
+
+section div a {
+    display: block;
+    padding: 30px 15px;
+    background-color: white;
+    color: #222;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+section div a:hover {
+    background-color: #eee;
+}
+
+section div a h3 {
+    margin: 0;
+}
+
+#featuredProducts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#productContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #222;
+    color: white;
+}
+
+#basketTotal {
+    text-align: right;
+    margin-top: 25px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#productContainer,
+#featuredProducts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#productContainer > div,
+#featuredProducts > div {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#productContainer img,
+#featuredProducts img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#productContainer h3,
+#featuredProducts h3 {
+    margin: 10px 0;
+}
+
+#productContainer p,
+#featuredProducts p {
+    margin: 10px 0;
+}
+
+#productContainer button,
+#featuredProducts button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+}
+
+#productContainer button:hover,
+#featuredProducts button:hover {
+    background-color: #444;
+}
+
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section div {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #featuredProducts {
+        grid-template-columns: 1fr;
+    }
+
+    #productContainer {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 450px) {
+    section div {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 25px 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+}
